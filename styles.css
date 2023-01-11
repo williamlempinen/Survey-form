@@ -4,3 +4,8 @@ html {
     font-family: 'Poppins', sans-serif;
     font-family: 'Titillium Web', sans-serif;
 }
+
+label {
+    display: block;
+    margin: 0.5rem 0;
+}
