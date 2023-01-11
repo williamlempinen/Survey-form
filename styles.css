@@ -1,8 +1,46 @@
+:root {
+    --primary-color: #473c33;
+    --secondary-color: #F2DEBA;
+    --secondary-color2: #1A120B;
+    --back-ground-color: #FDA769;
+}
+
 html {
     font-family: 'Exo 2', sans-serif;
     font-family: 'Inter', sans-serif;
     font-family: 'Poppins', sans-serif;
     font-family: 'Titillium Web', sans-serif;
+}
+
+body {
+    background-color: var(--back-ground-color);
+    font-size: 18px;
+    color: var(--secondary-color);
+}
+
+#title, #description {
+    margin: 10px auto;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.container {
+    background-color: var(--primary-color);
+    border-radius: 2.3em;
+    border: opx solid;
+    min-width: 100px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+fieldset {
+    border: none;
+}
+
+input, textarea, select {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--back-ground-color);
+    color: var(--secondary-color2);
 }
 
 label {
