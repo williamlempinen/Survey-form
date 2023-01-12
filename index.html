@@ -13,28 +13,30 @@
 
     <body>
         <h1 id="title">My survey form</h1>
-        <p id="description">This is my survey form for the freeCodeCamp certification project</p>
+        <p id="description">This is my survey form for the freeCodeCamp certification project (extended)</p>
 
         <div class="container">
-            <form action="tähänURL tai toinen tieodsto" method="post" id="survey-form">
-                <fieldset>
-                    <label for="name-label">
-                        First name <input id="name" type="text" placeholder="Esko" required/>
-                    </label>
-                    <label for="last-name">
-                        Last name <input id="last-name" type="text" placeholder="Esimerkki" required/>
-                    </label>
-                    <label for="number-label">
-                        Age <input id="number" type="number" placeholder="22" min="15" max="120" required/>
-                    </label>
-                    <label for="email-label">
-                        Email <input id="email" type="email" placeholder="esimerkki@example.com"required/>
-                    </label>
-                    <label for="password-label">
-                        Password <input id="password" type="password" pattern="\w{8,}" placeholder="min. lenght 8" required/>
-                    </label>
+            <form action="jsonina data formista" method="post" id="survey-form">
+                <fieldset class="fieldset-1">
+                    <div class="info-container">
+                        <label for="name-label">
+                            First name <input id="name" type="text" placeholder="Esko" required/>
+                        </label>
+                        <label for="last-name">
+                            Last name <input id="last-name" type="text" placeholder="Esimerkki" required/>
+                        </label>
+                        <label for="number-label">
+                            Age <input id="number" type="number" placeholder="22" min="15" max="120" required/>
+                        </label>
+                        <label for="email-label">
+                            Email <input id="email" type="email" placeholder="esimerkki@example.com"required/>
+                        </label>
+                        <label for="password-label">
+                            Password <input id="password" type="password" pattern="[A-Za-z0-9]{8,16}" placeholder="min. lenght 8" required/>
+                        </label>
+                    </div>
                 </fieldset>
-                <fieldset>
+                <fieldset class="fieldset-2">
                     <label for="select-animal">Which of these animals describes you the best</label>
                     <select id="select-animal" required>
                         <option value="">(choose one)</option>
@@ -44,19 +46,27 @@
                         <option value="snake">Snake</option>
                         <option value="blue-whale">Blue whale</option>
                     </select>
-                    <label for="personality">Select two adjectives that describes your personality the best
-                        <input type="checkbox" id="personality" />
+                </fieldset>
+                <fieldset class="fieldset-3">
+                    <label for="personality">Which of these describes you the best (choose one):
+                        <div class="radio-container">
+                        <label><input type="radio" id="personality" name="choose-one" value="funny-guy" />The funny person</label>
+                        <label><input type="radio" id="personality" name="choose-one" value="loudest" />The loudest person</label>
+                        <label><input type="radio" id="personality" name="choose-one" value="shy" />The shy person</label>
+                        <label><input type="radio" id="personality" name="choose-one" value="clever" />The cleverest person</label>
+                        <label><input type="radio" id="personality" name="choose-one" value="regular" />The most regular person</label>
+                        <label><input type="radio" id="personality" name="choose-one" value="teacher's-pet" />The teacher's pet</label> 
+                        <label><input type="radio" id="personality" name="choose-one" value="strongman" />The strongest person</label>
+                        <label><input type="radio" id="personality" name="choose-one" value="weakman" />The weakest person</label>
+                        </div>
                     </label>
-                    
                 </fieldset>
-
-                <fieldset>
-                    <label for="anything-else">Want to describe yourself with few words...</label>
-                    <textarea id="anything-else" rows="3" cols="50" placeholder="My favourite food is maksalaatikko..."></textarea>
+                <fieldset class="fieldset-4">
+                    <label for="anything-else">Want to describe yourself with a few words...</label>
+                    <textarea id="anything-else" rows="3" cols="50" placeholder="My favourite food is maksalaatikko with..."></textarea>
                 </fieldset>
-                <input type="submit">
+                <input id="submit-button" type="submit"/>
             </form>
         </div>
-
     </body>
 </html>
